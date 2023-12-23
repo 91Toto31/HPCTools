@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include <time.h>
 
 #define N 24  //taille de la matrice
