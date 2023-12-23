@@ -3,7 +3,7 @@
 #include <math.h>
 #include <time.h>
 
-#define N 24  //taille de la matrice
+#define N 100  //taille de la matrice
 
 void afficherMatrice(double matrice[N][N + 1]) {
     for (int i = 0; i < N; i++) {
@@ -58,7 +58,7 @@ int main() {
     // Remplissage de la matrice avec des valeurs aléatoires
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N + 1; j++) {
-        	matrice[i][j] = (rand() % 100) /10; //permet de générer des nombres aléatoires réels entre 0 et 9.9
+        	matrice[i][j] = rand() % 1001; //permet de générer des nombres aléatoires réels entre 0 et 1000
         }
     }
 
