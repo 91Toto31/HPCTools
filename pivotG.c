@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N 3 //taille de la matrice
+#define N  //taille de la matrice
 
 void afficherMatrice(double matrice[N][N + 1]) {
     for (int i = 0; i < N; i++) {
