@@ -2,7 +2,7 @@
 #include "dgesv.h"
 #include <math.h>
 
-const int N = 100;
+const int N = 3;
 
 void afficherMatrice(double matrice[N][N + 1]) {
     for (int i = 0; i < N; i++) {
