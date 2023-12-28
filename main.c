@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
   bref = duplicate_matrix(b, size);
 
   printf("Original Matrix:\n");
-  printf("LAPACKE", aref);
+  printf("LAPACKE \n", aref);
 
   //
   // Using LAPACK dgesv OpenBLAS implementation to solve the system
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
   printf("Time taken by Lapacke dgesv: %ld ms\n", diff_milli(&start, &now));
 
   printf("Matrix after LAPACKE dgesv:\n");
-  printf("LAPACKE", aref);
+  printf("LAPACKE \n", aref);
 
   //
   // Using your own solver based on Gauss or Gauss-Jordan elimination
