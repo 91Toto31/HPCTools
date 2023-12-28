@@ -2,7 +2,7 @@
 #include "dgesv.h"
 #include <math.h>
 
-const int N = 100;
+const int N = 3;
 
 void printMatrix(const char* name, double matrix[N][N + 1]) {
     printf("%s:\n", name);
