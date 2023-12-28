@@ -2,7 +2,9 @@
 #include "dgesv.h"
 #include <math.h>
 
-void eliminationGauss(double matrice[N][N + 1], int N) {
+const int N = 100;
+
+void eliminationGauss(double matrice[N][N + 1]) {
     for (int col = 0; col < N - 1; col++) {
         int max_row = col;
         for (int i = col + 1; i < N; i++) {
@@ -24,7 +26,7 @@ void eliminationGauss(double matrice[N][N + 1], int N) {
     }
 }
 
-void substitutionArriere(double matrice[N][N + 1], double solutions[N], int N) {
+void substitutionArriere(double matrice[N][N + 1], double solutions[N]) {
     for (int i = N - 1; i >= 0; i--) {
         solutions[i] = matrice[i][N];
         for (int j = i + 1; j < N; j++) {
@@ -34,7 +36,7 @@ void substitutionArriere(double matrice[N][N + 1], double solutions[N], int N) {
     }
 }
 
-int my_dgesv(int n, int nrhs, double *a, double *b, int N) {
+int my_dgesv(int n, int nrhs, double *a, double *b) {
     double matrice[N][N + 1];
     double solutions[N];
 
