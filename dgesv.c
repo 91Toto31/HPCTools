@@ -60,6 +60,9 @@ int my_dgesv(int n, int nrhs, double *a, double *b) {
         }
     }
 
+    //affiche la matrice
+    afficherMatrice(matrice);
+
     // Élimination de Gauss
     eliminationGauss(matrice);
 
