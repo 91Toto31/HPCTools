@@ -1,4 +1,4 @@
-int // dgesv.h
+// dgesv.h
 #ifndef DGESV_H
 #define DGESV_H
 
