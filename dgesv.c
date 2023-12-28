@@ -1,5 +1,6 @@
 // dgesv.c
 #include "dgesv.h"
+#include <math.h>
 
 void eliminationGauss(double matrice[N][N + 1]) {
     for (int col = 0; col < N - 1; col++) {
