@@ -1,6 +1,7 @@
 // dgesv.c
 #include "dgesv.h"
 #include <math.h>
+#include <stdio.h>
 
 const int N = 3;
 
