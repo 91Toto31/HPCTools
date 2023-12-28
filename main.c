@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
   printf("Time taken by Lapacke dgesv: %ld ms\n", diff_milli(&start, &now));
 
   printf("Matrix after LAPACKE dgesv:\n");
-  printMatrix("LAPACKE", aref);
+  printf("LAPACKE", aref);
 
   //
   // Using your own solver based on Gauss or Gauss-Jordan elimination
