@@ -12,6 +12,17 @@ LDLIBS=-lopenblas
 #LDLIBS=-qmkl=sequential -lmkl_intel_lp64
 
 dgesv: dgesv.o timer.o main.o
+	$(CC) $(LDFLAGS) -o dgesv dgesv.o timer.o main.o $(LDLIBS)
+
+dgesv.o: dgesv.c dgesv.h
+	$(CC) $(CFLAGS) -c dgesv.c
+
+timer.o: timer.c timer.h
+	$(CC) $(CFLAGS) -c timer.c
+
+main.o: main.c dgesv.h timer.h
+	$(CC) $(CFLAGS) -c main.c
 
 clean:
 	$(RM) dgesv *.o *~
+
