@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
   bref = duplicate_matrix(b, size);
 
   printf("Original Matrix:\n");
-  printMatrix("LAPACKE", aref);
+  printf("LAPACKE", aref);
 
   //
   // Using LAPACK dgesv OpenBLAS implementation to solve the system
