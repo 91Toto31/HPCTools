@@ -69,6 +69,8 @@ int main(int argc, char *argv[])
   aref = duplicate_matrix(a, size);
   bref = duplicate_matrix(b, size);
 
+  printf("Original Matrix:\n");
+  printMatrix("LAPACKE", aref);
 
   //
   // Using LAPACK dgesv OpenBLAS implementation to solve the system
@@ -84,6 +86,8 @@ int main(int argc, char *argv[])
   timestamp(&now);
   printf("Time taken by Lapacke dgesv: %ld ms\n", diff_milli(&start, &now));
 
+  printf("Matrix after LAPACKE dgesv:\n");
+  printMatrix("LAPACKE", aref);
 
   //
   // Using your own solver based on Gauss or Gauss-Jordan elimination
@@ -94,6 +98,9 @@ int main(int argc, char *argv[])
 
   timestamp(&now);
   printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
+
+  printf("Matrix after my_dgesv:\n");
+  printMatrix("my_dgesv", a);
 
   if (check_result(bref, b, size) == 1)
     printf("Result is ok!\n");
