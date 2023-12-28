@@ -2,6 +2,8 @@
 #include "dgesv.h"
 #include <math.h>
 
+const int N = 100;
+
 void afficherMatrice(double matrice[N][N + 1]) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N + 1; j++) {
