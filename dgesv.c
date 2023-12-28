@@ -4,6 +4,17 @@
 
 const int N = 100;
 
+void printMatrix(const char* name, double matrix[N][N + 1]) {
+    printf("%s:\n", name);
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N + 1; j++) {
+            printf("%.2f\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
 void eliminationGauss(double matrice[N][N + 1]) {
     for (int col = 0; col < N - 1; col++) {
         int max_row = col;
