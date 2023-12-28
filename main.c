@@ -99,8 +99,6 @@ int main(int argc, char *argv[])
   timestamp(&now);
   printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
 
-  printf("Matrix after my_dgesv:\n");
-  printMatrix("my_dgesv", a);
 
   if (check_result(bref, b, size) == 1)
     printf("Result is ok!\n");
