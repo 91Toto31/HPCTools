@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 
-const int N = 3;
+//const int N = 3;
 
 void afficherMatrice(double matrice[N][N + 1]) {
     for (int i = 0; i < N; i++) {
@@ -49,9 +49,9 @@ void substitutionArriere(double matrice[N][N + 1], double solutions[N]) {
     }
 }
 
-int my_dgesv(int n, int nrhs, double *a, double *b, double matrice[N][N + 1]) {
+int my_dgesv(int n, int nrhs, double *a, double *b) {
    // double matrice[N][N + 1];
-    double solutions[N];
+  //  double solutions[N];
 
    /* // Copiez les données d'entrée dans la matrice
     for (int i = 0; i < N; i++) {
@@ -61,7 +61,11 @@ int my_dgesv(int n, int nrhs, double *a, double *b, double matrice[N][N + 1]) {
     }*/
 
     //affiche la matrice
-    afficherMatrice(matrice);
+    printf("affiche la matrice a \n");
+    afficherMatrice(a);
+
+    printf("affiche la matrice b \n");
+    afficherMatrice(b);
 
     // Élimination de Gauss
     eliminationGauss(matrice);
