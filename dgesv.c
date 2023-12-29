@@ -1,4 +1,3 @@
-// dgesv.c
 #include "dgesv.h"
 #include <math.h>
 #include <stdio.h>
@@ -50,16 +49,16 @@ void substitutionArriere(double matrice[N][N + 1], double solutions[N]) {
     }
 }
 
-int my_dgesv(int n, int nrhs, double *a, double *b) {
+int my_dgesv(int n, int nrhs, double *a, double *b, double matrice[N][N + 1]) {
     double matrice[N][N + 1];
     double solutions[N];
 
-    // Copiez les données d'entrée dans la matrice
+   /* // Copiez les données d'entrée dans la matrice
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N + 1; j++) {
             matrice[i][j] = a[i * (N + 1) + j];
         }
-    }
+    }*/
 
     //affiche la matrice
     afficherMatrice(matrice);
