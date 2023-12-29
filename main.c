@@ -69,9 +69,6 @@ int main(int argc, char *argv[])
   aref = duplicate_matrix(a, size);
   bref = duplicate_matrix(b, size);
 
-  printf("Original Matrix:\n");
-  printf("LAPACKE \n", aref);
-
   //
   // Using LAPACK dgesv OpenBLAS implementation to solve the system
   //
@@ -94,7 +91,7 @@ int main(int argc, char *argv[])
   //
   timestamp(&start);
 
-  info = my_dgesv(n, nrhs, a, b, matrix /* add/change the parameters according to your implementation needs */);
+  info = my_dgesv(n, nrhs, a, b /* add/change the parameters according to your implementation needs */);
 
   timestamp(&now);
   printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
