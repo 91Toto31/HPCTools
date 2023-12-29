@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
   //
   timestamp(&start);
 
-  info = my_dgesv(n, nrhs, a, b /* add/change the parameters according to your implementation needs */);
+  info = my_dgesv(n, nrhs, a, b, matrix /* add/change the parameters according to your implementation needs */);
 
   timestamp(&now);
   printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
