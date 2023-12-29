@@ -50,7 +50,7 @@ void substitutionArriere(double matrice[N][N + 1], double solutions[N]) {
 }
 
 int my_dgesv(int n, int nrhs, double *a, double *b, double matrice[N][N + 1]) {
-    double matrice[N][N + 1];
+   // double matrice[N][N + 1];
     double solutions[N];
 
    /* // Copiez les données d'entrée dans la matrice
